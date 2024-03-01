@@ -1,0 +1,6 @@
+Move-Item -Path "*.txt" -Destination "D:\txts"
+Move-Item -Path "*.pdf" -Destination "D:\pdfs"
+Move-Item -Path "*.jpg" -Destination "D:\imgs"
+Move-Item -Path "*.jpeg" -Destination "D:\imgs"
+Move-Item -Path "*.png" -Destination "D:\imgs"
+Move-Item -Path "*.mp4" -Destination "D:\vids"

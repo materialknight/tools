@@ -1,0 +1,75 @@
+=== GOOGLE DRIVE ===
+
+When you share an image via Google Drive, you get a link like this:
+
+https://drive.google.com/file/d/1nhbqUPFqqMtmcyFoQ6QUjHOnMtATN9kO/view?usp=sharing
+
+PROBLEM: That link goes to an interface to see the image, not to the image itself, thus it can't be used in an <img> tag.
+
+SOLUTION: Replace "file/d/" with "uc?id=", like this:
+
+https://drive.google.com/uc?id=1nhbqUPFqqMtmcyFoQ6QUjHOnMtATN9kO
+
+That link goes to the image itself, thus it can be used in an <img> tag. You now have free Google Drive image hosting!
+
+=== TWITTER (X) ===
+
+In Twitter (now X), a tweet's link has the form:
+
+twitter.com/<user identifier>/status/<tweet id>
+
+PROBLEM: If you save one such link, the user can change his identifier, rendering your link useless.
+
+SOLUTION: You can use the "anyuser" identifier and the url will redirect to the tweet, with the correct user identifier.
+
+For instance, if you go to:
+
+twitter.com/anyuser/status/541278904204668929
+
+The link redirects to:
+
+https://twitter.com/MarkTabNet/status/541278904204668929
+
+=== === ===
+
+PROBLEM: You want to cite a tweet's video, not the entire tweet, just the video.
+
+SOLUTION: If the link of the tweet (whose video you want to cite) is:
+
+https://twitter.com/LucAuffret/status/1716085946016252251
+
+Simply append "/video/1" to it when writing your citing tweet, like this:
+
+https://twitter.com/LucAuffret/status/1716085946016252251/video/1
+
+If the cited tweet has more than one video, change the number at the end of that URL to pick the one you want.
+
+=== Mercury Mail Server ===
+
+PROBLEM: After installing XAMPP, the PHP function mail() doesn't work out of the box.
+
+To send and receive email, you must have a mail server, the one that comes with XAMPP is Mercury, which can be started on the XAMPP control panel.
+
+Before starting Mercury, follow one of the solutions below:
+
+SOLUTIONS:
+
+1. For local testing in Windows, you don't need an external address to send or receive emails, you can send emails to yourself with Mercury:
+
+  In php.ini, the [mail function] section should look like this (ignoring comments [lines starting with ";"]):
+
+  SMTP=localhost
+  smtp_port=25
+  sendmail_from = postmaster@localhost
+  mail.add_x_header=Off
+
+
+  "SMTP" stands for Simple Mail Transfer Protocol.
+
+  A mail must have a "From" header. "sendmail_from" indicates the default email address PHP will use in the From header (that is: the default sender address) when calling mail().
+
+  If you don't want to set "sendmail_from" (or if you have but want to use a different sender address) you must pass a From header to mail() (see mail()'s documentation to see how).
+
+  In the Mercury mail server, "postmaster" is an alias for the admin user, its mail is "postmaster@localhost" and its mailbox is at XAMPP > MercuryMail > MAIL > Admin
+
+2. # TO DO.
