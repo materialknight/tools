@@ -1,10 +1,9 @@
 $DownloadsFolder = 'C:\Users\MaterialKnight\Downloads'
 
 $Images = @(
-   Join-Path $DownloadsFolder '*.jpg',
-   Join-Path $DownloadsFolder '*.jpeg',
-   Join-Path $DownloadsFolder '*.png',
-   Join-Path $DownloadsFolder '*.mp4'
+   (Join-Path $DownloadsFolder '*.jpg'),
+   (Join-Path $DownloadsFolder '*.jpeg'),
+   (Join-Path $DownloadsFolder '*.png')
 )
 
 $ErrorLog = Join-Path $PSScriptRoot 'errors.txt'
