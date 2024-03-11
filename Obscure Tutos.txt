@@ -122,3 +122,31 @@ git remote add origin github.com/your_GitHub_Username/repo_name
 That tells git: "github.com/your_GitHub_Username/repo_name" is the remote that corresponds to this local repo (git should pull from there and push to there), and "origin" will be its local name, such that whenever I refer to "origin" (such as in "git push origin"), I'm talking about "github.com/your_GitHub_Username/repo_name".
 
 You should be able to push after that.
+
+=== SETUP LAMPP (XAMPP) IN LINUX ===
+
+PROBLEM: Setup LAMPP (XAMPP) servers in Linux.
+
+SOLUTION:
+
+1. Download the XAMPP installer for Linux from 'apachefriends.org'.
+
+2. Change the installer's permissions:
+
+chmod 755 xampp-linux-x64-8.2.12-0-installer.run
+
+3. Run the installer:
+
+sudo ./xampp-linux-x64-8.2.12-0-installer.run
+
+4. To start XAMPP, run:
+
+sudo /opt/lampp/lampp start
+
+If you prefer to use the graphical tool, run instead:
+
+cd /opt/lampp
+
+sudo ./manager-linux-x64.run
+
+That's all.
