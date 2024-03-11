@@ -73,3 +73,52 @@ SOLUTIONS:
   In the Mercury mail server, "postmaster" is an alias for the admin user, its mail is "postmaster@localhost" and its mailbox is at XAMPP > MercuryMail > MAIL > Admin
 
 2. # TO DO.
+
+=== SETUP GIT TO PUSH TO GITHUB ===
+
+PROBLEM: I can't push current local branch to my remote GitHub repo.
+
+CLARIFICATION: Git and GitHub need an email address to sign your commits, so they can be attributed to you (you can run "git log" to see the username and email of the author of each commit). In Git you set the email like this:
+
+git config --global user.email 'your_email@google.com'
+
+GitHub, on the other hand, will prompt you to verify an email address (you can verify a primary email and many backup emails).
+
+In "GitHub > Settings > Emails" you can enable the option "Keep my email addresses private"; if you do, GitHub will sign your commits (and any other contribution activity, like creating a repo, opening a pull request, opening an issue, etc.) with an email address of the form "<numeric_Id>+<your_Username>@users.noreply.github.com" (such that any activity signed with that email will appear in your GitHub contribution graph).
+
+If you don't enable the option "Keep my email addresses private", GitHub will sign your commits with your account's (verified) primary email address (such that any activity signed with that email will appear in your GitHub contribution graph).
+
+SOLUTION:
+
+In Git, set your username and email to be the same as you GitHub's (if you enabled the option "Keep my email addresses private", you must set Git's global "user.email" to your GitHub-given email address of the form "<numeric_Id>+<your_Username>@users.noreply.github.com"), like this:
+
+git config --global user.name 'your_GitHub_Username'
+git config --global user.email '<numeric_Id>+<your_Username>@users.noreply.github.com'
+
+Then run:
+
+apt install gh
+
+When the installation is done, run:
+
+gh auth login
+
+And follow the interactive prompts. That's it! Try pushing to a remote repo with:
+
+git push
+
+Or with:
+
+git push origin
+
+If you still can't push, perhaps the remote repo is not mapped to the local repo; check that with:
+
+git remote show
+
+That shows the remote repos mapped to your local repo. If that shows nothing, that means there's no remote repo mapped to your local repo. To map a remote repo to your local repo, run:
+
+git remote add origin github.com/your_GitHub_Username/repo_name
+
+That tells git: "github.com/your_GitHub_Username/repo_name" is the remote that corresponds to this local repo (git should pull from there and push to there), and "origin" will be its local name, such that whenever I refer to "origin" (such as in "git push origin"), I'm talking about "github.com/your_GitHub_Username/repo_name".
+
+You should be able to push after that.
