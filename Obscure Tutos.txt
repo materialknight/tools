@@ -332,6 +332,8 @@ code .
 
 8. Click the "Start" button to start the lessons.
 
+To switch tutorials, repeat steps 4-8 (you'll lose all progress).
+
 AVAILABLE TUTORIALS:
 
 Learn Bash by Building a Boilerplate
