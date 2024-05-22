@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <!-- , initial-scale=1.0 -->
+   <meta name="viewport" content="width=device-width" />
+
+   <link rel="stylesheet" href="style.css" />
+   <link rel="manifest" href="toDoList.json" />
+   <link rel="icon" href="favicon.png" />
+
+   <script src="app.js" defer></script>
+
+   <title>To Do List PWA</title>
+</head>
+
+<body>
+   <h1>To Do List PWA</h1>
+   <form>
+      <fieldset>
+         <legend>Enter what you have to do</legend>
+         <label for='task'>Task</label>
+         <input type='text' id='task' required />
+      </fieldset>
+      <button type='submit'>add task</button>
+   </form>
+   <button type='button'>unregister service worker</button>
+   <button type='button'>delete cache</button>
+   <button type='button'>delete local storage</button>
+   <ol id='to-do-list'></ol>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+* {
+   box-sizing: border-box;
+}
+
+li {
+   width: 20rem;
+   background-color: green;
+   display: flex;
+   justify-content: space-between;
+}

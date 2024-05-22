@@ -1,0 +1,20 @@
+To log in:
+
+psql --username=freecodecamp --dbname=postgres
+
+To dump students database into students.sql:
+
+pg_dump --clean --create --inserts --username=freecodecamp students > students.sql
+
+Or:
+
+pg_dump -cC --inserts -U freecodecamp universe > universe.sql
+
+To execute PostgreSQL commands in scripts:
+
+$PSQL="$(psql --username=freecodecamp --dbname=salon -c "SQL QUERY HERE")"
+
+To clean the database after testing (convenient at the beginning of scripts that insert data):
+
+echo $($PSQL "TRUNCATE table1, table2, table3")
+

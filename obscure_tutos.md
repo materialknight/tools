@@ -643,3 +643,24 @@ For example, to open the colab-github-demo.ipynb notebook from the master branch
 
 `https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb`
 
+## Using D3 via NPM
+
+Run:
+
+```bash
+npm install d3
+```
+
+During development, link `d3.js` to your `.html` file with this script tag:
+
+```html
+<script src="node_modules/d3/dist/d3.js"></script>
+```
+
+For production, link `d3.min.js` (the minified version) instead of the above, like this:
+
+```html
+<script src="node_modules/d3/dist/d3.min.js"></script>
+```
+
+If any of the above script tags doesn't work, it's possible `d3.js` (or `d3.min.js`) is in a different location inside the `node_modules` folder; if so, find the correct path and put it instead of the path example above.
