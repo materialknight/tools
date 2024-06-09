@@ -1,0 +1,23 @@
+{
+   "name": "fcc-learn-npm-package-json",
+   "version": "1.0.0",
+   "license": "GNU GPL 3.0",
+   "description": "Backend practice",
+   "keywords": [
+      "freecodecamp",
+      "backend",
+      "exercises"
+   ],
+   "dependencies": {
+      "express": "^4.14.0"
+   },
+   "main": "server.js",
+   "scripts": {
+      "start": "node server.js"
+   },
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/freeCodeCamp/boilerplate-npm.git"
+   },
+   "author": "Andrés Pichinte"
+}

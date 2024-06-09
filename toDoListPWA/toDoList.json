@@ -1,0 +1,15 @@
+{
+   "name": "To Do List",
+   "short_name": "TDL",
+   "description": "Keep track of your pending chores",
+   "theme_color": "#eeffee",
+   "background_color": "#eeffee",
+   "display": "standalone",
+   "start_url": "/",
+   "icons": [
+      {
+         "src": "./favicon.png",
+         "sizes": "512x512"
+      }
+   ]
+}

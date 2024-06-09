@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+   <meta charset='UTF-8'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <link rel='stylesheet' href='style.css'>
+   <script src='app.js' defer></script>
+   <title>Drag n' Drop, Re-sizeable Sidebar & Tabs</title>
+</head>
+
+<body>
+   <h1>Drag n' Drop, Re-sizeable Sidebar & Tabs</h1>
+   <div id='container'>
+      <aside>
+         <a href='#one'>One</a>
+         <a href='#two'>Two</a>
+         <a href='#three'>Three</a>
+         <a href='#four'>Four</a>
+         <a href='#five'>Five</a>
+      </aside>
+      <main>
+         <ul>
+            <li draggable='true'>1st first</li>
+            <li draggable='true'>2nd second</li>
+            <li draggable='true'>3rd third</li>
+            <li draggable='true'>4th fourth</li>
+            <li draggable='true'>5th fifth</li>
+         </ul>
+         <section>
+            <nav>
+               <button type='button' class='tab active'>article 1</button>
+               <button type='button' class='tab inactive'>article 2</button>
+               <button type='button' class='tab inactive'>article 3</button>
+            </nav>
+            <article class='active'>
+               <h2>article 1</h2>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sunt delectus maxime cumque
+                  praesentium
+                  in corporis commodi dolore hic animi labore quia velit enim suscipit eius repudiandae id fuga non!</p>
+            </article>
+            <article class='inactive'>
+               <h2>article 2</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto saepe harum provident ratione
+                  similique inventore quam blanditiis, fuga officia adipisci cum quae perspiciatis sapiente ipsum in
+                  culpa
+                  dolorem consectetur asperiores.</p>
+            </article>
+            <article class='inactive'>
+               <h2>article 3</h2>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, labore illo vitae ea, officiis
+                  veniam corrupti aperiam dolorum libero rerum iusto perferendis aliquam autem saepe optio doloremque
+                  numquam error ratione!</p>
+            </article>
+         </section>
+         <section>
+            <h2 id='one'>subtitle 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam corporis numquam, quos aperiam quidem
+               eum
+               voluptatum officiis nemo nisi tempora id obcaecati voluptas earum laborum facilis ad quis pariatur ipsa.
+            </p>
+            <h2 id='two'>subtitle 2</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quidem alias quibusdam nihil aliquam
+               voluptas iusto voluptatibus dolores, minima quisquam, a dolore quam molestias perferendis. Accusantium
+               optio
+               cumque fugiat voluptatibus.</p>
+            <h2 id='three'>subtitle 3</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quidem alias quibusdam nihil aliquam
+               voluptas iusto voluptatibus dolores, minima quisquam, a dolore quam molestias perferendis. Accusantium
+               optio
+               cumque fugiat voluptatibus.</p>
+            <h2 id='four'>subtitle 4</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quidem alias quibusdam nihil aliquam
+               voluptas iusto voluptatibus dolores, minima quisquam, a dolore quam molestias perferendis. Accusantium
+               optio
+               cumque fugiat voluptatibus.</p>
+            <h2 id='five'>subtitle 5</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe quidem alias quibusdam nihil aliquam
+               voluptas iusto voluptatibus dolores, minima quisquam, a dolore quam molestias perferendis. Accusantium
+               optio
+               cumque fugiat voluptatibus.</p>
+         </section>
+      </main>
+   </div>
+
+</body>
+
+</html>
