@@ -74,6 +74,7 @@ def format_heading(heading):
 
    def format_h(match):
       title = match[0]
+      #todo: try to remove the line below to see whether it is unnecessary or not.
       title = title.strip()
       title = re.sub(r'\n *', r': ', title)
 

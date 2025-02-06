@@ -164,10 +164,16 @@ If you don't enable the option `Keep my email addresses private`, GitHub will si
 
 ### Solution:
 
-In Git, set your username and email to be the same as you GitHub's (if you enabled the option `Keep my email addresses private`, you must set Git's global `user.email` to your GitHub-given email address of the form `<numeric_Id>+<your_Username>@users.noreply.github.com`), like this:
+In Git, set your username and email to be the same as your GitHub's, for example:
 
 ```bash
 git config --global user.name 'your_GitHub_Username'
+git config --global user.email 'your_Primary_GitHub_mail@users.noreply.github.com'
+```
+
+However, if you enabled the option `Keep my email addresses private` in GitHub, you must instead set Git's global `user.email` to your GitHub-given email address of the form `<numeric_Id>+<your_Username>@users.noreply.github.com`, like this:
+
+```bash
 git config --global user.email '<numeric_Id>+<your_Username>@users.noreply.github.com'
 ```
 
@@ -287,7 +293,13 @@ That command runs `.bashrc` such that changes in environment variables are appli
    nvm install node
    ```
 
-That's it!
+That's it! If you need to update Node and NPM, run:
+
+```bash
+nvm install --lts --latest-npm
+```
+
+That will install the most recent Long Term Support version of Node along with the most recent NPM version that is compatible with it, and set them as the default versions to use. The previous versions you had are not uninstalled, unless you uninstall them explicitly.
 
 ## Install Docker Engine in Linux
 
