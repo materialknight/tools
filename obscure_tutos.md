@@ -215,7 +215,19 @@ git remote add origin https://github.com/your_GitHub_Username/repo_name
 
 That tells git: `https://github.com/your_GitHub_Username/repo_name` is the remote that corresponds to this local repo (git should pull from there and push to there), and `origin` will be its local name, such that whenever I refer to `origin` (such as in `git push origin`), I'm talking about `https://github.com/your_GitHub_Username/repo_name`.
 
-You should be able to push after that.
+If the remote repo has files that the local one doesn't (like a LICENSE created automatically by GitHub), run locally:
+
+```bash
+git pull origin main --set-upstream --rebase
+```
+
+That fetches the `main` branch from the remote repo `origin` (which we previously set to `https://github.com/your_GitHub_Username/repo_name`), puts your local `main` branch on top of it, and the resulting branch becomes your new local `main` branch. Then git maps `origin/main` to your local main branch, so that you can run `git fetch`, `git pull` and `git push` without arguments.
+
+Or if the remote repo is empty, you can push to it right away:
+
+```bash
+git push --set-upstream origin main
+```
 
 ## Set up LAMPP (XAMPP) in Linux
 
