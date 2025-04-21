@@ -210,10 +210,10 @@ git remote show
 That shows the remote repos mapped to your local repo. If that shows nothing, that means there's no remote repo mapped to your local repo. To map a remote repo to your local repo, run:
 
 ```bash
-git remote add origin github.com/your_GitHub_Username/repo_name
+git remote add origin https://github.com/your_GitHub_Username/repo_name
 ```
 
-That tells git: `github.com/your_GitHub_Username/repo_name` is the remote that corresponds to this local repo (git should pull from there and push to there), and `origin` will be its local name, such that whenever I refer to `origin` (such as in `git push origin`), I'm talking about `github.com/your_GitHub_Username/repo_name`.
+That tells git: `https://github.com/your_GitHub_Username/repo_name` is the remote that corresponds to this local repo (git should pull from there and push to there), and `origin` will be its local name, such that whenever I refer to `origin` (such as in `git push origin`), I'm talking about `https://github.com/your_GitHub_Username/repo_name`.
 
 You should be able to push after that.
 
